@@ -1,0 +1,16 @@
+{
+    "SiteSearchResultsPage" : {
+    "ActionSequence" : [
+            {
+                 "Action" : "sendKey",
+                 "WebElementType" : "id",
+                 "WebElement" : {"q" : "?"}
+            },
+            {
+                 "Action" : "click",
+                 "WebElementType" : "id",
+                 "WebElement" : "go"           
+            }
+            ]         
+  	}  			
+}

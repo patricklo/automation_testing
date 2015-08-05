@@ -1,0 +1,18 @@
+{
+    "page_header": {
+         "title_text": "Site Search Results | HSBC"
+    },
+    
+    "page_footer": {
+        "contact_text": "Customer Service",
+        "branch_text":  "Find a branch or ATM",
+        "invalid_case": "To be failed for demonstration"
+    },
+    "SiteSearchResultsPageTest": 
+    {
+        "ExpectedSearchResultsPageResults": 
+        {
+        "equity": "equity"
+         }              
+     }
+}
