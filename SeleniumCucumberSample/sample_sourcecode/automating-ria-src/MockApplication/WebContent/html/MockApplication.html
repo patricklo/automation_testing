@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Mock Application Login Page</title>
+	
+	<link rel="stylesheet" href="../js/dojo-1.8.3/dijit/themes/claro/claro.css">
+	<link rel="stylesheet" href="../css/base.css">
+	
+	<script type="text/javascript" 
+			data-dojo-config="'parseOnLoad': false, 
+		                  'async': true,
+		                  'paths' : {
+		                    'controllers' : '../../controllers',
+							'customDijits' : '../../customDijits'
+						}"
+	        src="../js/dojo-1.8.3/dojo/dojo.js">
+	</script>      
+	<script
+		type="text/javascript"
+		src="../js/bootstrap.js">
+	</script>
+
+</head>
+<body class="claro">
+
+	<div id=LoginPage>
+		<div data-dojo-type="customDijits/LoginForm" id="LoginFormDijit"></div>
+	</div>
+	
+<!--	<div id=LoginPageTemplated>-->
+<!--		<div data-dojo-type="customDijits/LoginFormTemplated" id="LoginFormTemplatedDijit"></div>-->
+<!--	</div>-->
+	<div id=HomePage>
+	
+	</div>
+
+</body>
+</html>
