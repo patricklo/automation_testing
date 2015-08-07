@@ -9,7 +9,8 @@ public class Navigation {
 	private User user;
 
 	public void given_I_navigate_to_the_mock_application(){
-		BrowserDriver.loadPage("http://localhost/MockApplication/html/MockApplication.html");
+		BrowserDriver.loadPage("http://localhost:8080/mockwebapp/html/MockApplication.html");
+		//BrowserDriver.loadPage("http://localhost/MockApplication/html/MockApplication.html");
 		LoginView.isDisplayedCheck();
 	}
 

@@ -1,0 +1,37 @@
+
+
+.evenCheck{ 
+	color: yellow;
+	background-color: blue;
+}
+
+.oddCheck{ 	
+   color: blue;
+   background-color: yellow;
+}
+
+table{
+	font-size:20px;	
+}
+
+.headline{
+	font-weight: bold;
+	background-color: blue;
+	color: white;	
+}
+
+.expandedArticle > *:not(.headline){
+	display: block;
+}
+
+.unexpandedArticle > *:not(.headline){
+	display: none;
+}
+
+
+
+
+
+	
+
+	

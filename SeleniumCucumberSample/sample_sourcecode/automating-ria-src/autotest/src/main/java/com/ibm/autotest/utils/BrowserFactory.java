@@ -9,6 +9,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.safari.SafariDriver;
@@ -31,7 +32,7 @@ public class BrowserFactory {
 		WebDriver driver;
 		
 		if(System.getProperty(BROWSER_PROP_KEY)==null){
-			browser = Browsers.FIREFOX;
+			browser = Browsers.CHROME;
 		}else{
 			browser = Browsers.browserForName(System.getProperty(BROWSER_PROP_KEY));
 		}
@@ -56,8 +57,19 @@ public class BrowserFactory {
 	}
 
 	private static WebDriver createChromeDriver() {
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-		return new ChromeDriver();
+		String WEBDRIVER_PATH = System.getProperty("user.dir")+"//src//main//resources//" ;
+		//System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+
+
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--test-type");
+		System.setProperty("webdriver.chrome.driver", WEBDRIVER_PATH + "chromedriver.exe");
+		return new ChromeDriver(options);
+
+
+
+
+		//return new ChromeDriver();
 	}
 	
 	private static WebDriver createFirefoxDriver(FirefoxProfile firefoxProfile) {
