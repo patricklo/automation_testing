@@ -31,20 +31,20 @@ public class BrowserFactory {
 		WebDriver driver;
 		
 		if(System.getProperty(BROWSER_PROP_KEY)==null){
-			browser = Browsers.FIREFOX;
+			browser = Browsers.CHROME;
 		}else{
 			browser = Browsers.browserForName(System.getProperty(BROWSER_PROP_KEY));
 		}
 		switch(browser){
-			case CHROME:
-				driver = createChromeDriver();
+			case FIREFOX:
+				driver = createFirefoxDriver(getFirefoxProfile());
 				break;
 			case SAFARI:
 				driver = createSafariDriver();
 				break;
-			case FIREFOX:
+			case CHROME:
 			default:
-				driver = createFirefoxDriver(getFirefoxProfile());
+				driver = createChromeDriver();
 				break;
 		}
 		addAllBrowserSetup(driver);
@@ -56,7 +56,14 @@ public class BrowserFactory {
 	}
 
 	private static WebDriver createChromeDriver() {
+		//for windows
+
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+
+		//for MAC
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+
+
 		return new ChromeDriver();
 	}
 	
